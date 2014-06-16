@@ -1,0 +1,15 @@
+.Scene3DView > #analyphEffect
+{
+	position: absolute;
+	background: url(images/3d-glasses.png);
+	width: 48px;
+	height: 48px;
+	bottom: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+
+.Scene3DView > #analyphEffect.enabled
+{
+	background: url(images/3d-glasses-enabled.png);
+}

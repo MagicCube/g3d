@@ -1,0 +1,72 @@
+.MapScene3DView .ToolBarView
+{
+    display: block;
+    list-style: none;
+    position: relative;
+    width: 46px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.MapScene3DView .ToolBarView li
+{
+    display: block;
+    width: 46px;
+    height: 46px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.5);
+    background-rpeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    margin-left: 18px;
+    margin-bottom: 18px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.MapScene3DView .ToolBarView li.checked, .ToolBarView li:ACTIVE
+{
+    background: rgba(87, 200, 232, 0.4);
+}
+
+
+
+
+
+.MapScene3DView .ToolBarView li#anaglyph
+{
+	background-image: url(images/3d.png);
+}
+.MapScene3DView .ToolBarView li#anaglyph.checked
+{
+	background-image: url(images/3d-on.png);
+}
+
+.MapScene3DView .ToolBarView li#view
+{
+	background-image: url(images/view-perspective.png);
+}
+.MapScene3DView .ToolBarView li#view.checked
+{
+	background-image: url(images/view.png);
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.MapScene3DView .ToolBarView li#rotate
+{
+	background-image: url(images/rotate.png);
+}
+
+.MapScene3DView .ToolBarView li#zoomIn
+{
+	background-image: url(images/zoom-in.png);
+	margin-bottom: 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.MapScene3DView .ToolBarView li#zoomOut
+{
+	background-image: url(images/zoom-out.png);
+	border-radius: 0 0 4px 4px;
+}
