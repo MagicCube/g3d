@@ -55,3 +55,30 @@ mx.whenReady(function()
     mapView.startAnimation();
 });
 ```
+
+
+Now let's add a polygon mesh to display 'Zifeng Tower'.
+Please refer to http://www.openstreetmap.org/way/140809508
+```javascript
+// Add a feature layer to diaplay buildings.
+var buildingLayer = new g3d.layer.FeatureLayer3D();
+mapView.addLayer(buildingLayer);
+
+buildingLayer.addPolygon(
+    [
+        [ 118.7781014, 32.062422 ],
+        [ 118.7777385, 32.0627166 ],
+        [ 118.7777183, 32.0627721 ],
+        [ 118.7779384, 32.0628862 ],
+        [ 118.7782096, 32.0629544 ],
+        [ 118.7782587, 32.0629002 ],
+        [ 118.7782337, 32.0624534 ],
+        [ 118.7781786, 32.0624179 ]
+    ],
+    200,   // Height of the polygon mesh in pixels.
+    {
+        color : 0xff0000,
+        opacity : 0.8
+    }
+);
+```
