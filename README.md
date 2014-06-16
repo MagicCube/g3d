@@ -79,6 +79,6 @@ buildingLayer.addPolygon(
     {
         color : 0xff0000,
         opacity : 0.8
-    }
+    }     // Or you can use any THREE.Material instead
 );
 ```
