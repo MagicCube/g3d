@@ -3,17 +3,12 @@ $ns("mx.scn");
 mx.scn.Scene = function()
 {
     var me = $extend(mx.view.View);
-    me.frame = {
-        width : "100%"
-    };
     var base = {};
 
     me.title = null;
-    me.subtitle = null;
     me.isActive = false;
 
-    me.container = null;
-
+    me.ontitlechanged = null;
     me.onactivate = null;
     me.ondeactivate = null;
 
@@ -26,18 +21,15 @@ mx.scn.Scene = function()
 
     me.setTitle = function(p_title)
     {
-        me.title = p_title;
-    };
-
-    me.setSubtitle = function(p_subtitle)
-    {
-        me.subtitle = p_subtitle;
+        if (me.title !== p_title)
+        {
+            me.title = p_title;
+            me.trigger("titlechanged");
+        }
     };
 
     me.activate = function(p_args, p_isBack)
     {
-        me.setSubtitle(me.subtitle);
-
         me.isActive = true;
         me.trigger("activate", {
             args : p_args,
@@ -53,7 +45,7 @@ mx.scn.Scene = function()
 
     me.toString = function()
     {
-        return "Activity[" + me.id + "]";
+        return "Scene[" + me.id + "]";
     };
 
     return me.endOfClass(arguments);
