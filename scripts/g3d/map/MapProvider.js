@@ -5,23 +5,23 @@ g3d.map.MapProvider = function()
     var me = $extend(MXObject);
     var base = {};
 
-    me.urlFormat = "http://{s}.tiles.mapbox.com/v3/xy.ie03oo2j/{z}/{x}/{y}.png32";
+    me.urlFormat = "http://{s}.tiles.mapbox.com/v3/nicki.uxdh1tt9/{z}/{x}/{y}.png32";
 
     /**
-     * sample me.urlFormat =
-     * "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"; MapBox Grey
-     * me.urlFormat =
-     * "http://webrd0{n}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}";
-     * 高德 me.urlFormat
-     * ="http://{s}.tiles.mapbox.com/v3/nicki.uxdh1tt9/{z}/{x}/{y}.png32" MapBox
-     * Normal me.urlFormat
-     * ="http://{s}.tiles.mapbox.com/v3/mozilla-webprod.e91ef8b3/{z}/{x}/{y}.png";
-     * MapBox立体感 me.urlFormat =
-     * "http://khms{n}.google.com.hk/kh/v=149&src=app&x={x}&y={y}&z={z}&s=Ga";
-     * Google Satellite me.urlFormat =
-     * "https://earthbuilder.googleapis.com/10446176163891957399-03098191120537720121-4/2/maptile/maps?v=3&authToken=CgiZD3q-khVBTBDahK2bBQ==&x={x}&y={y}&z={z}&s=";
-     * me.urlFormat
-     * ="http://{n}.aerial.maps.cit.api.here.com/maptile/2.1/maptile/newest/terrain.day/{z}/{x}/{y}/256/jpg?app_id=yyMGGSFl4Py1t71zw69y&app_code=GM8TDhPhXdmVYhxFzbOABg";
+     * Open Street Map (OSM)
+     * http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+     * 
+     * AutoNavi (高德)
+     * http://webrd0{n}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}
+     * 
+     * MapBox 
+     * http://{s}.tiles.mapbox.com/v3/nicki.uxdh1tt9/{z}/{x}/{y}.png32
+     * 
+     * Google Satellite
+     * https://earthbuilder.googleapis.com/10446176163891957399-03098191120537720121-4/2/maptile/maps?v=3&authToken=CgiZD3q-khVBTBDahK2bBQ==&x={x}&y={y}&z={z}&s=
+     * 
+     * Nokia Map
+     * http://{n}.aerial.maps.cit.api.here.com/maptile/2.1/maptile/newest/terrain.day/{z}/{x}/{y}/256/jpg?app_id=yyMGGSFl4Py1t71zw69y&app_code=GM8TDhPhXdmVYhxFzbOABg
      */
 
     me.tileSize = 256;
