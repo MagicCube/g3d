@@ -1,5 +1,11 @@
 # MagicCube g3d Framework
-MagicCube g3D Framework is a web GIS library for 3D visualization using WebGL technology.
+MagicCube g3D Framework is a web GIS library for 3D visualization using WebGL technology. In this early version, it supports
+* Real-time 3D Rendering and Animation, based on Three.js and WebGL
+* OSM / Google Map / Baidu Map / AutoNavi as map tile provider
+* Multi-layer supported
+* Basic 2D/3D geometry and feature supported
+* Anaglyph Effect (Red/Blue 3D Glasses are needed)
+* Build-in ToolBar and Compass
 
 # MagicCube MXFramework
 The g3d Framework is based on [MagicCube MXFramework](https://github.com/MagicCube/mxframework-core) and MagicCube mx3d Framework.
