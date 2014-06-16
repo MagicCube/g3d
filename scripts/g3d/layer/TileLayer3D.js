@@ -9,6 +9,8 @@ g3d.layer.TileLayer3D = function()
 
     me.zoomMin = 0;
     me.zoomMax = 0;
+    
+    me.useLocalStorage = false;
 
     me.mapProvider = null;
     me.zoomInfo = null;
@@ -203,7 +205,7 @@ g3d.layer.TileLayer3D = function()
     {
         var material = null;
         var key = _getKey(p_zoom, p_cols, p_rows);
-        var cachedImage = localStorage.getItem(key);
+        var cachedImage = me.useLocalStorage ? localStorage.getItem(key) : null;
 
         if (cachedImage == null)
         {
@@ -239,7 +241,7 @@ g3d.layer.TileLayer3D = function()
                         canvasContext.drawImage(p_image, (p_context.a + p_cols) * tileSize, height - (p_context.b + p_rows + 1) * tileSize, tileSize, tileSize);
                         texture.needsUpdate = true;
                         canvas.loading--;
-                        if (canvas.loading === 0)
+                        if (canvas.loading === 0 && me.useLocalStorage)
                         {
                             localStorage.setItem(key, canvas.toDataURL("image/jpeg"));
                             console.log("Saved tiles to cache. " + key);

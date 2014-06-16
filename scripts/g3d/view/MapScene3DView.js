@@ -1,5 +1,7 @@
 $ns("g3d.view");
 
+$import("lib.transit.transit");
+
 $import("mx3d.view.AnimatedScene3DView");
 
 $import("g3d.util.GeoJSONUtil");
