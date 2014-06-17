@@ -1,17 +1,20 @@
 # MagicCube g3d Framework
 MagicCube g3D Framework is a web GIS library for 3D visualization using WebGL technology. In this early version, it supports
-* High performance real-time 3D rendering and animations based on Three.js and WebGL
-* OSM / Google Map / Baidu Map / AutoNavi as map tile provider
+* Designed for geo-based big data visualization
+* Powered by [MagicCube MXFramework](https://github.com/MagicCube/mxframework-core)
+* High-performance real-time 3D rendering and animations based on Three.js and WebGL
+* [Open Street Map](http://www.openstreetmap.org/) / [MapBox](http://www.mapbox.com) / [Google Map](https://maps.google.com/) / [Nokia HERE Map](http://here.com/) / [Baidu Map](http://map.baidu.com/) / [AutoNavi](http://www.autonavi.com/) supported
 * Multi-layer supported
 * Basic 2D/3D geometries and features supported
+* GeoJSON supported
 * Cache tile images using HTML5 LocalStorage
 * Build-in ToolBar and Compass
 * <b>Anaglyph Effect (Red/Blue 3D Glasses are needed)<b>
 
-# MagicCube MXFramework
-The g3d Framework is based on [MagicCube MXFramework](https://github.com/MagicCube/mxframework-core) and MagicCube mx3d Framework.
+## Dependencies
+The g3d Framework is built on top of [MagicCube MXFramework](https://github.com/MagicCube/mxframework-core), [Three.js](threejs.org/), [Tween.js](https://github.com/sole/tween.js), [jQuery](http://jquery.com) and [jquery.transit](https://github.com/rstacruz/jquery.transit).
 
-# Usage
+## Usage
 Create a new 3D map view with an OSM-based layer.
 ```javascript
 $import("g3d.view.MapScene3DView");
@@ -21,7 +24,7 @@ mx.whenReady(function()
 {
     // Create a new MapProvider using MapBox tiles.
     var mapProvider = new g3d.map.MapProvider({
-        urlFormat: "http://{s}.tiles.mapbox.com/v3/xy.ie03oo2j/{z}/{x}/{y}.png32",
+        urlFormat: "http://{s}.tiles.mapbox.com/v3/nicki.uxdh1tt9/{z}/{x}/{y}.png32",
         tileSize: 256,    // Normally the tile size is always 256 in OSM and Google
     });
     
@@ -79,6 +82,6 @@ buildingLayer.addPolygon(
     {
         color : 0xff0000,
         opacity : 0.8
-    }     // Or you can use any THREE.Material instead
+    }     // Alternatively you can use any THREE.Material instead
 );
 ```
