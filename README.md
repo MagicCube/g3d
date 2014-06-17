@@ -21,7 +21,7 @@ mx.whenReady(function()
 {
     // Create a new MapProvider using MapBox tiles.
     var mapProvider = new g3d.map.MapProvider({
-        urlFormat: "http://{s}.tiles.mapbox.com/v3/xy.ie03oo2j/{z}/{x}/{y}.png32",
+        urlFormat: "http://{s}.tiles.mapbox.com/v3/nicki.uxdh1tt9/{z}/{x}/{y}.png32",
         tileSize: 256,    // Normally the tile size is always 256 in OSM and Google
     });
     
