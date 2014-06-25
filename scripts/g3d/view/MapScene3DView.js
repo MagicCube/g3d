@@ -195,7 +195,10 @@ g3d.view.MapScene3DView = function()
 
     me.initMapProvider = function()
     {
-        me.mapProvider = new g3d.map.MapProvider();
+        if (me.mapProvider === null)
+        {
+            me.mapProvider = new g3d.map.MapProvider();
+        }
     };
 
     me.initZoomInfo = function()
