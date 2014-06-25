@@ -13,6 +13,8 @@ MagicCube g3D Framework is a web GIS library for 3D visualization using WebGL te
 
 ## [Live Demo](http://magiccube.github.io/g3d/)
 
+![](https://raw.githubusercontent.com/MagicCube/g3d/master/screenshots/subway.png)
+
 Open the [live demo page](http://magiccube.github.io/g3d/) with Chrome, Safari or any other Webkit-based modern browser.
 
 <b>How to Use</b>
