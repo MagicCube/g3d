@@ -1,0 +1,24 @@
+<material>
+
+<script type="x-shader/x-vertex" id="vertexShader">
+attribute float a_Alpha;
+varying float v_Alpha;
+void main()
+{
+    v_Alpha = a_Alpha;
+    gl_Position = projectionMatrix *
+                  modelViewMatrix *
+                  vec4(position,1.0);
+}
+</script>
+
+<script type="x-shader/x-fragment" id="fragmentShader">
+uniform vec3 u_Color;
+varying float v_Alpha;
+void main()
+{
+    gl_FragColor = vec4(u_Color, v_Alpha);
+}
+</script>
+
+</material>

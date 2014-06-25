@@ -1,0 +1,26 @@
+.MapScene3DView
+{
+    position: relative;
+}
+
+.MapScene3DView .LabelView
+{
+	font-size: 12px;
+	position: absolute;
+	color: white;
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 6px 6px;
+	-webkit-transform: translate(-50%, -50%);
+	-webkit-transform-origin: center center;
+	text-shadow: 0 0 2px black;
+	white-space: nowrap;
+}
+
+.MapScene3DView img#compass
+{
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    cursor: pointer;
+}
