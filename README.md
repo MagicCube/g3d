@@ -11,20 +11,19 @@ MagicCube g3D Framework is a web GIS library for 3D visualization using WebGL te
 * Build-in ToolBar and Compass
 * <b>Anaglyph Effect (Red/Blue 3D Glasses are needed)<b>
 
-## Live Demo
-[http://magiccube.github.io/g3d/](http://magiccube.github.io/g3d/)
+## [Live Demo](http://magiccube.github.io/g3d/)
 
 Please use Chrome, Safari or any other Webkit-based modern browser to run the demo properly.
 
-How to Use
+<b>How to Use</b>
 * Drag with left button to pan.
 * Drag with right button to rotate.
 
-If you have a multi-finger touchable device, you can
+<b>If you have a multi-finger touchable device, you can</b>
 * Touch with one-finger to pan.
 * Touch with two-finger to rotate.
 
-If you have a Red/Blue 3D Glasses
+<b>If you have a Red/Blue 3D Glasses</b>
 * Click the glasses button of the toolbar on the left side to switch between 2D and 3D mode.
 
 ## Screenshots
