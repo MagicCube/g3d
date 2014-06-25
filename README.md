@@ -21,9 +21,9 @@ Open the [live demo page](http://magiccube.github.io/g3d/) with Chrome, Safari o
 * Scroll to zoom in and out.
 
 <b>If you have a multi-finger touchable device, you can</b>
-* Touch with one-finger to pan.
-* Touch with two-finger to rotate.
-* Pinch to zoom in and out.
+* Touch with one finger to pan.
+* Touch with two fingers to rotate.
+* Pinch with two fingers to zoom in and out.
 
 <b>If you have a Red/Blue 3D Glasses</b>
 * Click the glasses button of the toolbar on the left side to switch between 2D and 3D mode.
