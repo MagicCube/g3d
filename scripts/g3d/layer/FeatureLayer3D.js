@@ -65,6 +65,12 @@ g3d.layer.FeatureLayer3D = function()
         me.addObject(mesh);
         return mesh;
     };
+    
+    me.addSpline = function(p_spline, p_pointCount, p_material)
+    {
+        var points = p_spline.getPoints(p_pointCount);
+        return me.addLineString(points, p_material);
+    };
 
     me.addLineString = function(p_coordinates, p_material)
     {
@@ -128,7 +134,7 @@ g3d.layer.FeatureLayer3D = function()
     me.translateMaterial = function(p_material, p_materialClass, p_defaultParams)
     {
         var material = null;
-        if (p_material != null)
+        if (notEmpty(p_material))
         {
             if (isPlainObject(p_material))
             {
@@ -146,6 +152,10 @@ g3d.layer.FeatureLayer3D = function()
             {
                 throw new Error("p_material '" + p_material + "' can not be translated into Material.");
             }
+        }
+        else
+        {
+            throw new Error("p_material can not be null or empty");
         }
         return material;
     };

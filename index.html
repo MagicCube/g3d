@@ -13,6 +13,9 @@
 </body>
 
 <script>
+$import("lib.d3js.d3");
+
+$import("example.layer.ChordLayer3D");
 $import("g3d.view.MapScene3DView");
 
 var mapView = null;
@@ -49,6 +52,10 @@ mx.whenReady(function()
         useLocalStorage: true     // Use HTML5 Local Storage to cache the tiles.
     });
     mapView.addLayer(tileLayer);
+    
+    // Add a 3D chord chart layer
+    var chordLayer = new example.layer.ChordLayer3D();
+    mapView.addLayer(chordLayer);
 
     // Start animation, so the user can interactive with the map.
     mapView.startAnimation();
