@@ -20,7 +20,7 @@ mx.whenReady(function()
 {
     // Create a new MapProvider using MapBox tiles.
     var mapProvider = new g3d.map.MapProvider({
-        urlFormat: "http://{s}.tiles.mapbox.com/v3/nicki.uxdh1tt9/{z}/{x}/{y}.png32",
+        urlFormat: "http://api.tiles.mapbox.com/v3/examples.map-y3zqp32d/{z}/{x}/{y}.png32",
         tileSize: 256,    // Normally the tile size is always 256 in OSM and Google
     });
     
@@ -44,40 +44,12 @@ mx.whenReady(function()
         }
     });
 
-    
     // Add a OSM-based tile layer.
     var tileLayer = new g3d.layer.TileLayer3D({
         useLocalStorage: true     // Use HTML5 Local Storage to cache the tiles.
     });
     mapView.addLayer(tileLayer);
-    
-    
-    // Add a feature layer to diaplay buildings.
-    var buildingLayer = new g3d.layer.FeatureLayer3D();
-    mapView.addLayer(buildingLayer);
-    
-    // Add a polygon mesh to display 'Zifeng Tower'.
-    // See http://www.openstreetmap.org/way/140809508
-    buildingLayer.addPolygon(
-        [
-            [ 118.7781014, 32.062422 ],
-            [ 118.7777385, 32.0627166 ],
-            [ 118.7777183, 32.0627721 ],
-            [ 118.7779384, 32.0628862 ],
-            [ 118.7782096, 32.0629544 ],
-            [ 118.7782587, 32.0629002 ],
-            [ 118.7782337, 32.0624534 ],
-            [ 118.7781786, 32.0624179 ]
-        ],
-        200,   // Height of the polygon mesh in pixels.
-        {
-            color : 0xff0000,
-            opacity : 0.8
-        }
-    );
-        
-    
-    
+
     // Start animation, so the user can interactive with the map.
     mapView.startAnimation();
 });
