@@ -3,6 +3,8 @@ https://www.youtube.com/watch?v=fFMc5P8F7SY
 
 https://www.youtube.com/watch?v=PQuNo-mrLKU
 
+https://www.youtube.com/watch?v=DNW6VwIxl4w
+
 # MagicCube g3d Framework
 MagicCube g3D Framework is a web GIS library for 3D visualization using WebGL technology. In this early version, it supports
 * Designed for geo-based big data visualization
